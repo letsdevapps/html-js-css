@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Local</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        button {
+            background: blue;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+    <!-- Link para CSS users -->
+    <link rel="stylesheet" href="mock-data-users/users.css">
+
+</head>
+<body>
+
+    <h1>Área de Testes</h1>
+
+    <div id="app"></div>
+    
+    <button onclick="mostrarMensagem()">
+        Clique aqui
+    </button>
+    <script>
+        function mostrarMensagem() {
+            alert("Funcionou!");
+        }
+
+        console.log("Template carregado");
+    </script>
+
+    <h2>Usuários (Mock Data)</h2>
+
+    <table>
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Cidade</th>
+          </tr>
+      </thead>
+      <tbody id="tabelaUsuarios"></tbody>
+    </table>
+    <script src="mock-data-users/users.js"></script>
+    <script src="mock-data-users/load-users-table.js"></script>
+
+</body>
+</html>
