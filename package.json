@@ -1,0 +1,26 @@
+{
+  "name": "html-js-css",
+  "version": "1.0.0",
+  "description": "Laboratorio especifico para Html, Js e Css, sem motor backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx http-server -p 8000"
+  },
+  "_comment": "Esse projeto serve HTML estático local",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/letsdevapps/html-js-css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/letsdevapps/html-js-css/issues"
+  },
+  "homepage": "https://github.com/letsdevapps/html-js-css#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
