@@ -17,42 +17,63 @@
             padding: 10px;
         }
     </style>
+    <!-- Link para CSS Menu -->
+    <link rel="stylesheet" href="menu/menu.css">
     <!-- Link para CSS users -->
     <link rel="stylesheet" href="mock-data-users/users.css">
 
 </head>
 <body>
+    <header style="padding-bottom: 30px;">----- Header -----
+      <h1>Área de Testes</h1>
+      
+      <div id="menu"></div>
+      <script>
+        fetch('menu/menu.html')
+          .then(r => r.text())
+          .then(html => {
+            document.getElementById('menu').innerHTML = html;
+          });
+      </script>
+      <!--iframe src="menu/menu.html" style="width:100%;height:60px;border:none;">
+      </iframe-->
+    </header>
 
-    <h1>Área de Testes</h1>
+    <main style="padding: 5px 20px;">----- Main -----
+      <section id="message">
+        <div id="app"></div>
+      
+        <button onclick="mostrarMensagem()">
+            Clique aqui
+        </button>
+        <script>
+            function mostrarMensagem() {
+                alert("Funcionou!");
+            }
+            console.log("Template carregado");
+        </script>
+      </section>
 
-    <div id="app"></div>
-    
-    <button onclick="mostrarMensagem()">
-        Clique aqui
-    </button>
-    <script>
-        function mostrarMensagem() {
-            alert("Funcionou!");
-        }
+      <section id="users">
+        <h2>Usuários (Mock Data)</h2>
+        <table>
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>Cidade</th>
+              </tr>
+          </thead>
+          <tbody id="tabelaUsuarios"></tbody>
+        </table>
+        <script src="mock-data-users/users.js"></script>
+        <script src="mock-data-users/load-users-table.js"></script>
+      </section>
+    </main>
 
-        console.log("Template carregado");
-    </script>
-
-    <h2>Usuários (Mock Data)</h2>
-
-    <table>
-      <thead>
-          <tr>
-              <th>ID</th>
-              <th>Nome</th>
-              <th>Email</th>
-              <th>Cidade</th>
-          </tr>
-      </thead>
-      <tbody id="tabelaUsuarios"></tbody>
-    </table>
-    <script src="mock-data-users/users.js"></script>
-    <script src="mock-data-users/load-users-table.js"></script>
-
+    <footer style="padding-top: 30px;">----- Footer -----
+      <p>&copy; 2026 Obrigado pela visita</p>
+    </footer>
 </body>
 </html>
