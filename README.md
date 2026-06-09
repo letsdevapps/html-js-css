@@ -2,9 +2,77 @@
 
 Laboratorio especifico para Html, Js e Css, sem motor backend.
 
+# Meu Projeto
+
+![GitHub release](https://img.shields.io/github/v/release/letsdevapps/html-js-css)
+![GitHub last commit](https://img.shields.io/github/last-commit/letsdevapps/html-js-css)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/letsdevapps/html-js-css/build-ci.yml)
+
 ## Acesso via servidor HTTP local simples
 
 Acesso via servidor HTTP local simples utiliza todos os beneficios http
+
+### Docker
+
+    docker build -t html-js-css .
+    
+    docker run --rm -it -p 80:80 html-js-css
+
+    http://localhost
+
+### Nginx
+
+Instalação do Nginx no Ubuntu
+
+    sudo apt-get install nginx -y
+
+Desabilitar subir automatico toda vez
+
+    sudo systemctl disable nginx
+
+Iniciar manualmente
+
+    sudo systemctl start nginx
+
+Copiar seu repo para uma pasta que sera servida
+
+    sudo cp ~/workspace/html-js-css -r /var/www/html-js-css
+
+Copiar ou Criar arquivo de configuração para seu projeto, Extensão: opcional, só para organização. Nginx não exige .conf para funcionar.
+
+    sudo cp nginx/html-js-css.conf /etc/nginx/sites-available/html-js-css
+
+ou Criar
+
+    sudo nano /etc/nginx/sites-available/html-js-css
+    
+    server {
+        listen 80;
+        server_name localhost;
+
+        root /var/www/html-js-css;
+        index index.html;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
+
+Criar links simbolico no Nginx de Disponivel para Permitido. Link simbólico em sites-enabled: é isso que realmente “ativa” o site.
+
+    sudo ln -s /etc/nginx/sites-available/html-js-css /etc/nginx/sites-enabled/
+    
+Conferir se sintaxe esta ok
+    
+    sudo nginx -t
+    
+Reiniciar Nginx
+    
+    sudo systemctl reload nginx
+
+Lista projetos disponiveis
+
+    ls -l /etc/nginx/sites-enabled/
 
 ### Python
 
