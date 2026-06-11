@@ -74,6 +74,41 @@ Lista projetos disponiveis
 
     ls -l /etc/nginx/sites-enabled/
 
+### Busybox
+
+O componente httpd do BusyBox é um servidor web extremamente simples e leve. Inclusive menor que o Nginx. Meu ubuntu ja veio com busybox-static (codigo compilado nativo, ele instala o executável e utiliza bibliotecas compartilhadas do sistema) instalado através do ubuntu-standard, entao nem precisei instalar nada.
+
+Executa de qualquer local
+
+    busybox httpd -f -p 8080 -h ~/caminho-do-projeto/html-js-css/
+
+Ou entrar na pasta e depois executar
+
+    cd ~/caminho-do-projeto/html-js-css/
+
+    busybox httpd -f -p 8080 -h .
+
+#### Busybox AUTO START (Opcional)
+
+Criar um serviço systemd para iniciar automaticamente
+
+    [Unit]
+    Description=BusyBox HTTP Server
+
+    [Service]
+    ExecStart=/usr/bin/busybox httpd -f -p 8080 -h /var/www/meu-site
+    Restart=always
+
+    [Install]
+    WantedBy=multi-user.target
+
+Salve em /etc/systemd/system/busybox-httpd.service
+
+Depois autorize
+
+    sudo systemctl daemon-reload
+    sudo systemctl enable --now busybox-httpd
+
 ### Python
 
 Dentro da pasta do projeto:
