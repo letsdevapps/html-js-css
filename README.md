@@ -2,11 +2,14 @@
 
 Laboratorio especifico para Html, Js e Css, sem motor backend.
 
-# Meu Projeto
-
 ![GitHub release](https://img.shields.io/github/v/release/letsdevapps/html-js-css)
 ![GitHub last commit](https://img.shields.io/github/last-commit/letsdevapps/html-js-css)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/letsdevapps/html-js-css/build-ci.yml)
+
+![Docker](https://img.shields.io/badge/Docker-enabled-blue)
+![CI](https://img.shields.io/badge/CI-enabled-blue)
+![CD](https://img.shields.io/badge/CD-enabled-blue)
+![Status](https://img.shields.io/badge/status-active-success)
 
 ## Acesso via servidor HTTP local simples
 
