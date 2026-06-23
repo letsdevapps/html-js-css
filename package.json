@@ -2,7 +2,7 @@
   "name": "html-js-css",
   "version": "1.0.0",
   "description": "Laboratorio especifico para Html, Js e Css, sem motor backend.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx http-server -p 8000"
@@ -22,5 +22,8 @@
   "homepage": "https://github.com/letsdevapps/html-js-css#readme",
   "devDependencies": {
     "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "playwright": "^1.61.0"
   }
 }

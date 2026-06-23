@@ -1,14 +1,15 @@
 # HTML JS CSS
 
-Laboratorio especifico para Html, Js e Css, sem motor backend.
-
 ![GitHub release](https://img.shields.io/github/v/release/letsdevapps/html-js-css)
 ![GitHub last commit](https://img.shields.io/github/last-commit/letsdevapps/html-js-css)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/letsdevapps/html-js-css/build-ci.yml)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/letsdevapps/html-js-css/build-ci.yml?label=status%20integration)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/letsdevapps/html-js-css/build-cd.yml?label=status%20deployment)
 
-![Docker](https://img.shields.io/badge/Docker-enabled-blue)
-![CI](https://img.shields.io/badge/CI-enabled-blue)
-![CD](https://img.shields.io/badge/CD-enabled-blue)
+![Playwright](https://img.shields.io/badge/playwright-enabled-blue)
+
+![Docker](https://img.shields.io/badge/docker-enabled-blue)
+![CI](https://img.shields.io/badge/ci-enabled-blue)
+![CD](https://img.shields.io/badge/cd-enabled-blue)
 ![Status](https://img.shields.io/badge/status-active-success)
 
 ## Acesso via servidor HTTP local simples
@@ -179,3 +180,31 @@ Acesso direto no browser perdemos os beneficios http, impossibilita o browser de
     
     file:///home/usuario/workspace/html-js-css/index.html
 
+---
+
+## Estrutura do Projeto
+
+html-js-css/
+│
+├── nginx/
+├── src/
+├── tests/
+├── Dockerfile
+├── package.json
+├── package-lock.json
+└── server.go
+
+## CI/CD
+
+O projeto está preparado para pipelines de integração e entrega contínua, permitindo automação de testes e deploy.
+
+CI configurado para acionar via:
+
+* push-origin main
+* pull-request main
+* manual workflow dispatch
+
+CD configurado para acionar via:
+
+* push-origin tag
+* manual workflow dispatch

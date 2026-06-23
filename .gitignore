@@ -7,6 +7,10 @@
 # VS Code
 .vscode/
 
+# Eclipse
+.project
+.settings/
+
 # Node modules
 node_modules/
 
