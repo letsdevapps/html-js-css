@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teste de Email</title>
+</head>
+<body>
+  <div id="email"></div>
+
+  <script>
+    // Inclui o código do random.js
+    function gerarEmail() {
+      return `teste_${Date.now()}@email.com`;
+    }
+
+    // Exibe o email na página
+    document.getElementById('email').innerText = gerarEmail();
+  </script>
+</body>
+</html>
