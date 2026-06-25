@@ -10,6 +10,8 @@
 ![Docker](https://img.shields.io/badge/docker-enabled-blue)
 ![CI](https://img.shields.io/badge/ci-enabled-blue)
 ![CD](https://img.shields.io/badge/cd-enabled-blue)
+![Kubernetes](https://img.shields.io/badge/kubernetes-enabled-blue)
+![Terraform](https://img.shields.io/badge/terraform-enabled-blue)
 ![Status](https://img.shields.io/badge/status-active-success)
 
 ## Acesso via servidor HTTP local simples
