@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: html-js-css-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: html-js-css
+  template:
+    metadata:
+      labels:
+        app: html-js-css
+    spec:
+      containers:
+        - name: html-js-css-container
+          image: ghcr.io/letsdevapps/html-js-css:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
