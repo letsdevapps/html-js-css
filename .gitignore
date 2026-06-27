@@ -11,6 +11,7 @@
 .project
 .settings/
 
+
 # Node modules
 node_modules/
 
@@ -35,3 +36,17 @@ yarn-error.log*
 
 # Vendor directory (se usar)
 vendor/
+
+# Terraform state
+terraform.tfstate
+*.tfstate.*
+terraform.tfstate.backup
+
+# Terraform directory
+.terraform/
+
+# Crash logs
+crash.log
+
+# CLI config
+.terraform.lock.hcl
