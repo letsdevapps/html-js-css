@@ -50,3 +50,16 @@ crash.log
 
 # CLI config
 .terraform.lock.hcl
+
+# Playwright browsers cache
+playwright/.cache/
+**/.cache/ms-playwright/
+
+# Test output (se usar @playwright/test)
+test-results/
+playwright-report/
+blob-report/
+
+# Optional: traces/videos/screenshots gerados em testes
+*.zip
+*.har

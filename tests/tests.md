@@ -51,3 +51,15 @@ tests/
 ├── pages/      -> objetos de página (Page Objects)
 ├── fixtures/   -> dados de teste
 └── helpers/    -> funções utilitárias compartilhadas
+
+## Executar
+
+	npx playwright test
+
+Config para mostrar a janela
+
+	headless: false
+
+Ou
+
+	npx playwright test --headed
